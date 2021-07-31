@@ -25,10 +25,10 @@ print(links)
 
 
 # Twitter
-apikey = "OyRMxGm5p34dTwNQaWveZn1GS"
-apisecretkey = "85h3T3Ttu9KWUQtzP2wTnSWwcyxnAJZHQmuynEKPAJ7qVZWx4R"
-accesstoken = "393345191-mDSlC24MeEauVI0vthNjQzXBlvupJUNjYxPeQYoL"
-accesstokensecret = "0n8IGlHv0VuzT0DnZOtkeOmftWoeHhlZtFmzIBFkkqNAa"
+apikey = ""
+apisecretkey = ""
+accesstoken = ""
+accesstokensecret = ""
 
 
 tw = TwitterAPI(apikey, apisecretkey, accesstoken, accesstokensecret)
