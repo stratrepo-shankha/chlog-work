@@ -44,17 +44,27 @@ class TwitterAPI:
 
         for status in statuses:
             if hasattr(status, "retweeted_status"):
-                tweets.append({
-                    'type': 'retweet',
-                    'text': status.retweeted_status.full_text,
-                    'additionalinfo': status.__dict__['_json']
-                })
+                tweets.append(
+                    {
+                        status.id_str:
+                        {
+                            'type': 'retweet',
+                            'text': status.full_text,
+                            'additionalinfo': status.__dict__['_json']
+                        }
+                    }
+                )
             else:
-                tweets.append({
-                    'type': 'original',
-                    'text': status.full_text,
-                    'additionalinfo': status.__dict__['_json']
-                })
+                tweets.append(
+                    {
+                        status.id_str:
+                        {
+                            'type': 'original',
+                            'text': status.full_text,
+                            'additionalinfo': status.__dict__['_json']
+                        }
+                    }
+                )
         return tweets
 
     @property
